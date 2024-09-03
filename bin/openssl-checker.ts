@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 import 'source-map-support/register';
 import * as cdk from 'aws-cdk-lib';
-import { MyPipelineStack } from '../lib/my-pipeline-stack';
+import { EcsCluster } from '../lib/ecs-cluster';
 
 const app = new cdk.App();
-new MyPipelineStack(app, 'OpensslCheckerStack', {
+new EcsCluster(app, 'OpensslCheckerStack', {
   env: { account: "358135218535", region: "eu-central-1" }
   /* If you don't specify 'env', this stack will be environment-agnostic.
    * Account/Region-dependent features and context lookups will not work,
